@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Feedback2.0">
+  <ModulePrefs title="Feedback4.0">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -9,10 +9,7 @@
   <![CDATA[
      <script type="text/javascript">
 
-       // The gadget version of ROT13.
-       // Encodes/decodes text strings by replacing each letter with the letter
-       // 13 positions to the right in the alphabet.
-
+       
       
        function giveFeedback (form) {
           var recepient = form.name.value;
@@ -22,20 +19,21 @@
 
 
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec?";
-          var post = {recepient: recepient, listening : listening, punctuality : punctuality, time : time};
+          var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
           var encoded_params = gadgets.io.encodeValues(post);
 
-          var debug = "About to call " + url + " with " + encoded-params;
-
+          var msg = new gadgets.MiniMessage(__MODULE_ID__);
+          msg.createDismissibleMessage("About to call" + url + " with " + encoded-params);
+          
           gadgets.io.makeRequest(url, callback, encoded_params);
-          document.getElementById("debug_div").innerHTML = debug;    
-       }
+          
+       };
 
 
        function callback(obj) {
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           msg.createDismissibleMessage("Your feedback on " + recepient + " has been noted. Thanks.");
-       }
+       };
       
 
      </script>
