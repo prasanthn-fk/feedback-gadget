@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Magic Decoder"/>
+  <ModulePrefs title="Magic Decoder">
+    <Require feature="minimessage"/> 
+  </ModulePrefs>
+
   <Content type="html">
   <![CDATA[
      <script type="text/javascript">
@@ -17,7 +20,8 @@
           var punctuality = form.punctuality.value
           var time = new Date();
 
-        document.getElementById('content_div').innerHTML = "On " + time + ", your listening habit is <b>" + listening + "</b> and your punctuality is " + punctuality;
+        var msg = new gadgets.MiniMessage(__MODULE_ID__);
+        msg.createDismissibleMessage("Your feedback on " + recepient + " has been noted. Thanks. Punctuality=" + punctuality);
 
      }
      </script>
