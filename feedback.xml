@@ -18,9 +18,7 @@
           var time = new Date();
 
 
-          //var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
-
-          var url = "http://www.google.com";
+          var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var post = {"recepient": recepient, "listening": listening, "punctuality" : punctuality, "time" : time};
@@ -35,7 +33,7 @@
 
        function callback(obj) {
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage(obj.text + ". Your feedback on  has been noted. Thanks.");
+          msg.createDismissibleMessage(obj.text);
        };
       
 
