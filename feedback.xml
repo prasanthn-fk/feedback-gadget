@@ -23,7 +23,7 @@
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var post = {"recepient": recepient, "listening": listening, "punctuality" : punctuality, "time" : time};
           post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
-          post[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
+          post[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;  
           post[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED;
 
           var encoded_params = gadgets.io.encodeValues(post);
