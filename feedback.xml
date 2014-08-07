@@ -13,19 +13,23 @@
       
        function giveFeedback (form) {
           var recepient = form.name.value;
-          var listening = form.listening.value
-          var punctuality = form.punctuality.value
+          var listening = form.listening.value;
+          var punctuality = form.punctuality.value;
           var time = new Date();
 
 
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec?";
-          var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
-          var encoded_params = gadgets.io.encodeValues(post);
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage("About to call" + url + " with " + encoded-params);
+          msg.createDismissableMessage("Howdy");
+
+          //var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
+          //var encoded_params = gadgets.io.encodeValues(post);
+
           
-          gadgets.io.makeRequest(url, callback, encoded_params);
+          // msg.createDismissibleMessage("About to call" + url + " with " + encoded-params);
+          
+          // gadgets.io.makeRequest(url, callback, encoded_params);
           
        };
 
@@ -57,7 +61,7 @@
        <INPUT TYPE="button" NAME="button" Value="Give Feedback" onClick="giveFeedback(this.form)">
      </FORM>
      <div id="content_div"></div>
-     <div id="debug_div"></div>
+     
   ]]>
   </Content>
 </Module>
