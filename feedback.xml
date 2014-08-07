@@ -18,11 +18,12 @@
           var time = new Date();
 
 
-          var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
+          var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec?a=b";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var post = {"recepient": recepient, "listening": listening, "punctuality" : punctuality, "time" : time};
-          post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+          post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
+          post[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
           post[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED;
 
           var encoded_params = gadgets.io.encodeValues(post);
