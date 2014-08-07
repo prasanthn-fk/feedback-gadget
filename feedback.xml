@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Mooo7">
+  <ModulePrefs title="Mooo8">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -23,8 +23,7 @@
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var post = {"recepient": recepient, "listening": listening, "punctuality" : punctuality, "time" : time};
           post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-
-          
+          post[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED
 
           var encoded_params = gadgets.io.encodeValues(post);
 
