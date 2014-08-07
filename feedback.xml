@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Module>
+  <ModulePrefs title="Magic Decoder"/>
+  <Content type="html">
+  <![CDATA[
+     <script type="text/javascript">
+
+       // The gadget version of ROT13.
+       // Encodes/decodes text strings by replacing each letter with the letter
+       // 13 positions to the right in the alphabet.
+
+      
+       function giveFeedback (form) {
+          var recepient = form.name.value;
+          var listening = form.listening.value
+          var punctuality = form.punctuality.value
+          var time = new Date();
+
+        document.getElementById('content_div').innerHTML = "On " + time + ", your listening habit is <b>" + listening + "</b> and your punctuality is " + punctuality;
+
+     }
+     </script>
+
+    <FORM NAME="myform" ACTION="" METHOD="GET">Etiquette   Feedback for <BR>
+       <INPUT TYPE="text" NAME="name" VALUE="prasanthn@flipkart.com"><P>
+       <label for="listening">Listening Habits:</label>
+       <select name="listening">
+          <option value="good">Good</option>
+          <option value="bad">Bad</option>
+          <option value="ugly">Ugly</option>
+       </select>
+       <br/>
+       <label for="punctuality">Punctuality:</label>
+       <select name="punctuality">
+          <option value="most_often_late">Most often late</option>
+          <option value="sometimes_late">Sometimes late</option>
+          <option value="prompt">Prompt</option>
+       </select>
+     </p>
+       <INPUT TYPE="button" NAME="button" Value="Give Feedback" onClick="giveFeedback(this.form)">
+     </FORM>
+     <div id="content_div"></div>
+  ]]>
+  </Content>
+</Module>
