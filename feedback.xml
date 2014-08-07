@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Mooo">
+  <ModulePrefs title="Mooo3">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -21,13 +21,13 @@
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissableMessage("Howdy");
+          msg.createDismissibleMessage("Howdy");
 
-          var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
-          post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
-          var encoded_params = gadgets.io.encodeValues(post);
+          //var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
+          // post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+          // var encoded_params = gadgets.io.encodeValues(post);
 
-          msg.createDismissibleMessage("About to call" + url + " with " + encoded_params);
+          // msg.createDismissibleMessage("About to call" + url + " with " + encoded_params);
           
           // gadgets.io.makeRequest(url, callback, encoded_params);
           
@@ -36,7 +36,7 @@
 
        function callback(obj) {
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage("Your feedback on " + recepient + " has been noted. Thanks.");
+          msg.createDismissibleMessage("Your feedback on  has been noted. Thanks.");
        };
       
 
