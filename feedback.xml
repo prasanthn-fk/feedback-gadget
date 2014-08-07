@@ -24,12 +24,11 @@
           var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
           post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
 
-          msg.createDismissibleMessage("Howdy2");
+          
 
+          var encoded_params = gadgets.io.encodeValues(post);
 
-          // var encoded_params = gadgets.io.encodeValues(post);
-
-          // msg.createDismissibleMessage("About to call" + url + " with " + encoded_params);
+          msg.createDismissibleMessage("About to call" + url + " with " + encoded_params);
           
           // gadgets.io.makeRequest(url, callback, encoded_params);
           
