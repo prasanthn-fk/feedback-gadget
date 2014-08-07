@@ -26,7 +26,7 @@
           post[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED
 
           var encoded_params = gadgets.io.encodeValues(post);
-
+          msg.createDismissibleMessage(url + "?" + encoded_params);
           gadgets.io.makeRequest(url, callback, encoded_params);
           
        };
