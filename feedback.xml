@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Mooo4">
+  <ModulePrefs title="Mooo5">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -21,10 +21,12 @@
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage("Howdy");
-
           var post = {"recepient": recepient, "listening ": listening, "punctuality" : punctuality, "time" : time};
           post[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT;  
+
+          msg.createDismissibleMessage("Howdy2");
+
+
           // var encoded_params = gadgets.io.encodeValues(post);
 
           // msg.createDismissibleMessage("About to call" + url + " with " + encoded_params);
