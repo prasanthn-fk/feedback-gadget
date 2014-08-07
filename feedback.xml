@@ -20,18 +20,20 @@
           var punctuality = form.punctuality.value
           var time = new Date();
 
-          
+
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec?";
           var post = {recepient: recepient, listening : listening, punctuality : punctuality, time : time};
           var encoded_params = gadgets.io.encodeValues(post);
 
+          var debug = "About to call " + url + " with " + encoded-params;
+
           gadgets.io.makeRequest(url, callback, encoded_params);
+          document.getElementById("debug_div").innerHTML = debug;    
        }
 
 
        function callback(obj) {
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          Logger.log(obj);
           msg.createDismissibleMessage("Your feedback on " + recepient + " has been noted. Thanks.");
        }
       
@@ -57,6 +59,7 @@
        <INPUT TYPE="button" NAME="button" Value="Give Feedback" onClick="giveFeedback(this.form)">
      </FORM>
      <div id="content_div"></div>
+     <div id="debug_div"></div>
   ]]>
   </Content>
 </Module>
