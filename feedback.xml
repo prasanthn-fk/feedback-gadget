@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Magic Decoder">
+  <ModulePrefs title="Feedback1.0">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -21,7 +21,10 @@
           var time = new Date();
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage("Your feedback on " + recepient + " has been noted. Thanks. Punctuality=" + punctuality);
+          
+
+          var update = write_to_db(new Date(), recepient, listening, punctuality);
+          msg.createDismissibleMessage("Your feedback on " + recepient + " has been noted. Thanks. " + update);
 
        }
 
