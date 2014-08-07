@@ -35,7 +35,7 @@
 
        function callback(obj) {
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage("Your feedback on  has been noted. Thanks.");
+          msg.createDismissibleMessage(obj.errors + ". Your feedback on  has been noted. Thanks.");
        };
       
 
