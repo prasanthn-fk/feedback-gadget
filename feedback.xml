@@ -34,7 +34,7 @@
 
        function callback(obj) {
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage(obj.text);
+          msg.createDismissibleMessage(obj.text + "\n" + obj.errors);
        };
       
 
