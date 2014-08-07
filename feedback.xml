@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Mooo6">
+  <ModulePrefs title="Mooo7">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -28,9 +28,7 @@
 
           var encoded_params = gadgets.io.encodeValues(post);
 
-          msg.createDismissibleMessage("About to call" + url + " with " + encoded_params);
-          
-          // gadgets.io.makeRequest(url, callback, encoded_params);
+          gadgets.io.makeRequest(url, callback, encoded_params);
           
        };
 
