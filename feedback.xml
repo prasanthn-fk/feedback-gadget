@@ -42,8 +42,7 @@
 
         function callback(response) { 
           console.log("Response:Text" + response.text);
-          console.log(response);
-
+          
           document.getElementById('content_div').innerHTML = response.text
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
