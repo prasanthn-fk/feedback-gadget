@@ -30,7 +30,7 @@
           params['listening'] = listening;
           params['punctuality'] = punctuality;
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
-          params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "HMAC";
+          // params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "HMAC";
           
           console.log("About to invoke url" + url);
           
