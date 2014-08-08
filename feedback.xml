@@ -31,6 +31,7 @@
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
           params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
           
+          console.log("About to invoke url  + url);
           
           // var encoded_params = gadgets.io.encodeValues(params);
           
@@ -40,7 +41,7 @@
 
         function callback(response) { 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage(obj.text + "\n" + obj.errors);
+          msg.createDismissibleMessage(response.text + "\n" + response.errors);
 
             if (response.oauthApprovalUrl) {
                 msg.createDismissibleMessage('OAuth URL:' + response.oauthApprovalUrl);
