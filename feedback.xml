@@ -72,7 +72,7 @@
 
      </script>
 
-     <div id="feedback_div" style="font-size:12px;">
+     <div id="feedback_div" style="font-size:12px;margin-left:5px;">
     <FORM NAME="myform" ACTION="" METHOD="GET"><b>Etiquette Feedback for </b><BR>
        
        <INPUT TYPE="text" NAME="name" VALUE="prasanthn@flipkart.com"><P>
