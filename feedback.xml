@@ -74,7 +74,7 @@
 
      </script>
 
-    <FORM NAME="myform" ACTION="" METHOD="GET">Etiquette   Feedback for <BR>
+    <FORM NAME="myform" ACTION="" METHOD="POST">Etiquette   Feedback for <BR>
        <INPUT TYPE="text" NAME="name" VALUE="prasanthn@flipkart.com"><P>
        <label for="listening">Listening Habits:</label>
        <select name="listening">
