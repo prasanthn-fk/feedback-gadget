@@ -71,6 +71,7 @@
 
      </script>
 
+     <div id="feedback_div" style="font-size:12px;">
     <FORM NAME="myform" ACTION="" METHOD="GET">Etiquette   Feedback for <BR>
        <INPUT TYPE="text" NAME="name" VALUE="prasanthn@flipkart.com"><P>
        <label for="listening">Listening Habits:</label>
@@ -89,7 +90,8 @@
      </p>
        <INPUT TYPE="button" NAME="button" Value="Give Feedback" onClick="giveFeedback(this.form)">
      </FORM>
-     <div id="content_div" style="border:4px;">Hi</div>
+     <div id="content_div" style="border:4px;"></div>
+   </div>
      
   ]]>
   </Content>
