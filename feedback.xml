@@ -82,7 +82,7 @@
           <option value="ugly">Ugly</option>
        </select>
        <br/>
-       <span style="height:5px;" />
+       <div style="height:5px;"></div>
        <label for="punctuality" >Punctuality:</label><br/>
        <select name="punctuality" >
           <option value="most_often_late">Most often late</option>
