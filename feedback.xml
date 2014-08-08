@@ -45,7 +45,7 @@
 
             if (response.oauthApprovalUrl) {
                 msg.createDismissibleMessage('OAuth URL:' + response.oauthApprovalUrl);
-            } else if (oauthError) {
+            } else if (response.oauthError) {
                 msg.createDismissibleMessage('OAuth error: ' + response.oauthError + ': ' + response.oauthErrorText);
             }
             if (response.data || response.text) {
