@@ -10,6 +10,9 @@
 
   <![CDATA[
 
+  <style>
+      font-size: small;
+  </style>
 
    <script type="text/javascript">
 
@@ -38,10 +41,10 @@
 
         function callback(response) { 
           
-          document.getElementById('content_div').innerHTML = response.text;
+          // document.getElementById('content_div').innerHTML = response.text;
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage(response.text);
+          msg.createDismissibleMessage("Thanks for the feedback!");
 
             if (response.oauthApprovalUrl) {
                 msg.createDismissibleMessage('OAuth URL:' + response.oauthApprovalUrl);
