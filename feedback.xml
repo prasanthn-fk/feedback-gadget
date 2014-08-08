@@ -41,7 +41,7 @@
 
         function callback(response) { 
 
-          document.getElementById('contentDiv').innerHTML = response.text
+          document.getElementById('content_div').innerHTML = response.text
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           msg.createDismissibleMessage(response.text + "\n" + response.errors);
