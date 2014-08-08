@@ -28,7 +28,7 @@
           postData["recepient"] = recepient;
           postData["listening"] = listening;
           postData["punctuality"] = punctuality;
-          postData = gadgets.io.encodeValues(postdata);
+          postData = gadgets.io.encodeValues(postData);
 
           var params = {};
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
