@@ -41,7 +41,6 @@
        };
 
         function callback(response) { 
-          console.log("Response:Text" + response.text);
           
           document.getElementById('content_div').innerHTML = response.text
 
