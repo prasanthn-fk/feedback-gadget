@@ -82,7 +82,8 @@
           <option value="ugly">Ugly</option>
        </select>
        <br/>
-       <label for="punctuality" style="margin-top:4px;">Punctuality:</label><br/>
+       <span style="height:5px;" />
+       <label for="punctuality" >Punctuality:</label><br/>
        <select name="punctuality" >
           <option value="most_often_late">Most often late</option>
           <option value="sometimes_late">Sometimes late</option>
