@@ -9,9 +9,7 @@
 
   <Content type="html">
 
-  <![CDATA[
-  <!-- ALm6fM2kFsEPoXvFhDw6/6Jvub0idJMTCgmYz8fc0dF4NDDUjtJSDZmRwkN7cWtYaZe5SbW7/A5/FRK0QK1hSy4CsTJ3G9icKsJ2E+0tCOWtRTSIcLb/k008ApG2e73SEG+NuteQMy79HE1RSxMM1CsUoxy/fZGXwP9r/N5kH4tGjxmcai2oMeA= -->
-
+  
     <script src="http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/popup.js"></script>
 
     <style>
@@ -32,7 +30,7 @@
           var listening = form.listening.value;
           var punctuality = form.punctuality.value;
 
-          var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
+          var url = "https://script.google.com/macros/s/AKfycbzHfDhyOn5MmrZGDcSNAL8d7pfIDW2HPAKFSmBzbA7ELfBbcx4/exec";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var params = {};
