@@ -3,13 +3,25 @@
 <Module>
   <ModulePrefs title="Help your Peer3">
     <Require feature="minimessage"/> 
-    <Require feature="opensocial-0.9"/>
+    <Require feature="opensocial-0.8" />
+
   </ModulePrefs>
 
   <Content type="html">
 
   <![CDATA[
   <!-- ALm6fM2kFsEPoXvFhDw6/6Jvub0idJMTCgmYz8fc0dF4NDDUjtJSDZmRwkN7cWtYaZe5SbW7/A5/FRK0QK1hSy4CsTJ3G9icKsJ2E+0tCOWtRTSIcLb/k008ApG2e73SEG+NuteQMy79HE1RSxMM1CsUoxy/fZGXwP9r/N5kH4tGjxmcai2oMeA= -->
+
+    <script src="http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/popup.js"></script>
+
+    <style>
+  #main {
+    margin: 0px;
+    padding: 0px;
+    font-size: small;
+  }
+  </style>
+
 
    <script type="text/javascript">
 
@@ -30,7 +42,7 @@
           params['listening'] = listening;
           params['punctuality'] = punctuality;
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
-          // params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "HMAC";
+//           params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
           
           console.log("About to invoke url" + url);
           
