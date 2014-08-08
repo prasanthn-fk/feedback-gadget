@@ -27,9 +27,9 @@
           var params = {};
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
           params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
-          params[recepient] = recepient;
-          params[listening] = listening;
-          params[punctuality] = punctuality;
+          params["recepient"] = recepient;
+          params["listening"] = listening;
+          params["punctuality"] = punctuality;
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
 
 //           params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
