@@ -6,9 +6,9 @@
   </ModulePrefs>
 
   <Content type="html">
-  <!-- ALm6fM3DSQU3scXIwICPpBsG0lOg21Z8di9Ca2ZzQ9dQGNjTjnruW1QlzT8mS/XreJn7CLQuSh+fObEdJVtgsn6IL0iVgm5o0sNDArc/x0bdZ+3+obYybCMrDQJhS+nN1IP/uaEI1dK3/P4uZULgVqMcLygGFlht3cVkgqlmsJSHzEp42nticxU4JOJVl3YpF5UvZ3tDf/zS -->
 
   <![CDATA[
+  <!-- ALm6fM3DSQU3scXIwICPpBsG0lOg21Z8di9Ca2ZzQ9dQGNjTjnruW1QlzT8mS/XreJn7CLQuSh+fObEdJVtgsn6IL0iVgm5o0sNDArc/x0bdZ+3+obYybCMrDQJhS+nN1IP/uaEI1dK3/P4uZULgVqMcLygGFlht3cVkgqlmsJSHzEp42nticxU4JOJVl3YpF5UvZ3tDf/zS -->
      <script type="text/javascript">
 
        
@@ -18,8 +18,6 @@
           var listening = form.listening.value;
           var punctuality = form.punctuality.value;
 
-          https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec
-          
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
@@ -29,7 +27,7 @@
           params['recepient'] = recepient;
           params['listening'] = listening;
           params['punctuality'] = punctuality;
-          params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH; 
+          params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
           params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
           params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
           
