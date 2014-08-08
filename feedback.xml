@@ -20,30 +20,19 @@
           var listening = form.listening.value;
           var punctuality = form.punctuality.value;
 
-          var url = "https://script.google.com/macros/s/AKfycbzHfDhyOn5MmrZGDcSNAL8d7pfIDW2HPAKFSmBzbA7ELfBbcx4/exec";
+          var url = "https://script.google.com/macros/s/AKfycbzHfDhyOn5MmrZGDcSNAL8d7pfIDW2HPAKFSmBzbA7ELfBbcx4/exec?recepient=" 
+          + recepient + "&listening=" + listening + "&punctuality=" + punctuality;
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
 
-          var postData = {};
-          postData["recepient"] = recepient;
-          postData["listening"] = listening;
-          postData["punctuality"] = punctuality;
-          postData = gadgets.io.encodeValues(postData);
-
           var params = {};
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
-          params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;  
-          params[gadgets.io.RequestParameters.POST_DATA]= postData;
+          params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
-
-//           params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
-          
-          
-          var encoded_params = gadgets.io.encodeValues(params);
           
           console.log("About to invoke url" + url + " with params " + encoded_params);
           
-          makeCachedRequest(url, callback, encoded_params, 0);
+          makeCachedRequest(url, callback, params, 0);
           
        };
 
@@ -79,7 +68,7 @@
 
      </script>
 
-    <FORM NAME="myform" ACTION="" METHOD="POST">Etiquette   Feedback for <BR>
+    <FORM NAME="myform" ACTION="" METHOD="GET">Etiquette   Feedback for <BR>
        <INPUT TYPE="text" NAME="name" VALUE="prasanthn@flipkart.com"><P>
        <label for="listening">Listening Habits:</label>
        <select name="listening">
