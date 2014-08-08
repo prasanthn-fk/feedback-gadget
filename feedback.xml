@@ -12,6 +12,7 @@
 
   <style>
       font-size: small;
+      margin-left: 4px;
   </style>
 
    <script type="text/javascript">
