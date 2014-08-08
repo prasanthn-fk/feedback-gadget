@@ -18,16 +18,19 @@
 
           https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec
           
-          var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec?recepient=" + recepient + "&listening=" + listening + "&punctuality=" + punctuality;
+          var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec";
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var params = {};
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
           params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
+          params['recepient'] = recepient;
+          params['listening'] = listening;
+          params['punctuality'] = punctuality;
           
           // var encoded_params = gadgets.io.encodeValues(params);
           
-          gadgets.io.makeRequest(url, callback, params);
+          makeCachedRequest(url, callback, params, 0);
           
        };
 
@@ -36,6 +39,19 @@
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           msg.createDismissibleMessage(obj.text + "\n" + obj.errors);
        };
+
+       function makeCachedRequest(url, callback, params, refreshInterval) {
+          var ts = new Date().getTime();
+          var sep = "?";
+          if (refreshInterval && refreshInterval > 0) {
+            ts = Math.floor(ts / (refreshInterval * 1000));
+          }
+          if (url.indexOf("?") > -1) {
+            sep = "&";
+          }
+          url = [ url, sep, "nocache=", ts ].join("");
+          gadgets.io.makeRequest(url, callback, params);
+       }
       
 
      </script>
