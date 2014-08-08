@@ -15,6 +15,8 @@
           var recepient = form.name.value;
           var listening = form.listening.value;
           var punctuality = form.punctuality.value;
+
+          https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec
           
           var url = "https://script.google.com/a/macros/flipkart.com/s/AKfycbymlveo5YmvUxmXFl20u2p2xZ2MUIvGBcVhho3Kr2QtGcD_s9I5/exec?recepient=" + recepient + "&listening=" + listening + "&punctuality=" + punctuality;
 
@@ -23,8 +25,6 @@
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
           params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
           
-          params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED;
-
           // var encoded_params = gadgets.io.encodeValues(params);
           
           gadgets.io.makeRequest(url, callback, params);
