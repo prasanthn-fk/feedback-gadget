@@ -72,17 +72,18 @@
      </script>
 
      <div id="feedback_div" style="font-size:12px;">
-    <FORM NAME="myform" ACTION="" METHOD="GET">Etiquette   Feedback for <BR>
+    <FORM NAME="myform" ACTION="" METHOD="GET"><b>Etiquette Feedback for </b><BR>
+       
        <INPUT TYPE="text" NAME="name" VALUE="prasanthn@flipkart.com"><P>
-       <label for="listening">Listening Habits:</label>
-       <select name="listening">
+       <label for="listening">Listening Habits:</label><br/>
+       <select name="listening" style="padding-top:4px;">
           <option value="good">Good</option>
           <option value="bad">Bad</option>
           <option value="ugly">Ugly</option>
        </select>
        <br/>
-       <label for="punctuality">Punctuality:</label>
-       <select name="punctuality">
+       <label for="punctuality">Punctuality:</label><br/>
+       <select name="punctuality" style="padding-top:4px;">
           <option value="most_often_late">Most often late</option>
           <option value="sometimes_late">Sometimes late</option>
           <option value="prompt">Prompt</option>
