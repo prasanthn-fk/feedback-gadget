@@ -9,16 +9,7 @@
 
   <Content type="html">
 
-  
-    <script src="http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/popup.js"></script>
-
-    <style>
-  #main {
-    margin: 0px;
-    padding: 0px;
-    font-size: small;
-  }
-  </style>
+  <![CDATA[
 
 
    <script type="text/javascript">
