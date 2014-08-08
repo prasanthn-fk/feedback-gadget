@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Help your Peer">
+  <ModulePrefs title="Help your Peer3">
     <Require feature="minimessage"/> 
   </ModulePrefs>
 
@@ -40,6 +40,9 @@
        };
 
         function callback(response) { 
+
+          document.getElementById('contentDiv').innerHTML = response.text
+
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           msg.createDismissibleMessage(response.text + "\n" + response.errors);
 
