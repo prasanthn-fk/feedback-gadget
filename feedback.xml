@@ -3,6 +3,7 @@
 <Module>
   <ModulePrefs title="Help your Peer3">
     <Require feature="minimessage"/> 
+    <Require feature="opensocial-0.9"/>
   </ModulePrefs>
 
   <Content type="html">
@@ -29,7 +30,7 @@
           params['listening'] = listening;
           params['punctuality'] = punctuality;
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
-          params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
+          params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "HMAC";
           
           console.log("About to invoke url" + url);
           
@@ -40,6 +41,8 @@
        };
 
         function callback(response) { 
+          console.log("Response:Text" + response.text);
+          console.log(response);
 
           document.getElementById('content_div').innerHTML = response.text
 
