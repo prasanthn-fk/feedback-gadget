@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Module>
-  <ModulePrefs title="Help your Peer3">
+  <ModulePrefs title="Help your Peer4">
     <Require feature="minimessage"/> 
-    <Require feature="opensocial-0.8" />
-
+    
   </ModulePrefs>
 
   <Content type="html">
@@ -26,7 +25,7 @@
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           var params = {};
           params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.TEXT; 
-          params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
+          params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;  
           params["recepient"] = recepient;
           params["listening"] = listening;
           params["punctuality"] = punctuality;
