@@ -6,6 +6,8 @@
   </ModulePrefs>
 
   <Content type="html">
+  <!-- ALm6fM3DSQU3scXIwICPpBsG0lOg21Z8di9Ca2ZzQ9dQGNjTjnruW1QlzT8mS/XreJn7CLQuSh+fObEdJVtgsn6IL0iVgm5o0sNDArc/x0bdZ+3+obYybCMrDQJhS+nN1IP/uaEI1dK3/P4uZULgVqMcLygGFlht3cVkgqlmsJSHzEp42nticxU4JOJVl3YpF5UvZ3tDf/zS -->
+
   <![CDATA[
      <script type="text/javascript">
 
@@ -27,6 +29,9 @@
           params['recepient'] = recepient;
           params['listening'] = listening;
           params['punctuality'] = punctuality;
+          params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH; 
+          params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
+          params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
           
           // var encoded_params = gadgets.io.encodeValues(params);
           
@@ -34,11 +39,21 @@
           
        };
 
-
-       function callback(obj) {
+        function callback(response) { 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
           msg.createDismissibleMessage(obj.text + "\n" + obj.errors);
+
+            if (response.oauthApprovalUrl) {
+                msg.createDismissibleMessage('OAuth URL:' + response.oauthApprovalUrl);
+            } else if (oauthError) {
+                msg.createDismissibleMessage('OAuth error: ' + response.oauthError + ': ' + response.oauthErrorText);
+            }
+            if (response.data || response.text) {
+                msg.createDismissibleMessage(response.text);
+            }
        };
+
+      
 
        function makeCachedRequest(url, callback, params, refreshInterval) {
           var ts = new Date().getTime();
