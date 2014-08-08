@@ -54,18 +54,15 @@
 
         function callback(response) { 
           
-          document.getElementById('content_div').innerHTML = response.text
+          document.getElementById('content_div').innerHTML = response.text;
 
           var msg = new gadgets.MiniMessage(__MODULE_ID__);
-          msg.createDismissibleMessage(response.text + "\n" + response.errors);
+          msg.createDismissibleMessage(response.text);
 
             if (response.oauthApprovalUrl) {
                 msg.createDismissibleMessage('OAuth URL:' + response.oauthApprovalUrl);
             } else if (response.oauthError) {
                 msg.createDismissibleMessage('OAuth error: ' + response.oauthError + ': ' + response.oauthErrorText);
-            }
-            if (response.data || response.text) {
-                msg.createDismissibleMessage(response.text);
             }
        };
 
@@ -105,7 +102,7 @@
      </p>
        <INPUT TYPE="button" NAME="button" Value="Give Feedback" onClick="giveFeedback(this.form)">
      </FORM>
-     <div id="content_div"></div>
+     <div id="content_div" style="border:4px;">Hi</div>
      
   ]]>
   </Content>
