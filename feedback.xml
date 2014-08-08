@@ -30,7 +30,7 @@
           params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;  
           params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.SIGNED; 
           
-          console.log("About to invoke url" + url + " with params " + encoded_params);
+          console.log("About to invoke url" + url + " with params " + params);
           
           makeCachedRequest(url, callback, params, 0);
           
